@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Poppin';
+    src: url('/assets/font/Poppins/Poppins-Medium.ttf');
+}
+
+
+:root {
+    --color-primary: #98C5E9;
+    --color-secondary: #00285E;
+}
+
+body {
+    font: normal 14px Helvetica, Arial, sans-serif;
+}
+
+#main {
+    font-family: Poppin;
+
+}
+
+#header {
+    max-height: 64px;
+}
+
+#header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    background-color: var(--color-primary);
+    height: 64px;
+
+}
+
+.wrapper .mci-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.wrapper .mci-logo .logo-img {
+    height: 36px;
+    margin-right: 8px;
+}
+
+.wrapper .mci-logo .logo-text {
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#header .wrapper .menu {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+}
+
+#header .wrapper .menu i {
+    font-size: 28px;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+#header .wrapper .navigation {
+    position: absolute;
+    right: 64px;
+    top: 64px;
+    box-shadow: 5px 5px 10px var(--color-secondary);
+    display: none;
+}
+
+#header .wrapper .navigation .nav-list {
+    /* margin-top: 132px; */
+    background-color: var(--color-primary);
+    color: #fff;
+    list-style-type: none;
+
+}
+
+.nav-list .nav-list-item {
+    padding: 8px 16px;
+}
+
+.nav-list .nav-list-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#main #body {
+    padding: 0 64px;
+}
+
+#body .team {
+    margin-top: 0;
+    /* height: 300px; */
+}
+
+.team .carousel {}
+
+.team .carousel .slides img {
+    /* width: 100%; */
+    /* position: relative; */
+    height: 300px;
+}
+
+.carousel .carousel-inner {
+    background: linear-gradient(180, black, white);
+}
+
+.carousel-inner>.item {
+    height: 380px;
+    width: 100%;
+}
+
+.carousel-inner>.item .carousel-caption {
+    bottom: 0;
+    text-transform: uppercase;
+}
+
+#body .section {
+    color: var(--color-secondary);
+    text-align: center;
+    margin: 0 64px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+
+}
+
+.section .section-heading {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 32px;
+}
+
+.section .section-heading h2 {
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.section .section-subheading {
+    text-align: center;
+    font-size: 12px;
+    margin: 16px 0;
+    opacity: 0.7;
+}
+
+.section .player {
+    background-color: var(--color-primary);
+    height: 380px;
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 4px
+}
+
+.list-squad~div {
+    margin-top: 44px;
+}
+
+.list-squad .squad-group__heading {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.list-squad .squad-group__wrapper {}
+
+.list-squad .squad-group__wrapper .squad-group {
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 33px;
+    flex-wrap: wrap;
+}
+
+.squad-group .squad-group__item {
+    list-style-type: none;
+    margin: 16px;
+    flex: 1 0 22%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.squad-group .squad-group__item .squad-group__item-link {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.squad-group__item-link .player-card__header {
+    background-color: #ebf4fb;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.squad-group__item-link .player-card__header .player-card__shirt-number {
+    color: #98C5E9;
+    font-size: 88px;
+    font-weight: 600;
+    position: absolute;
+    right: -2px;
+    top: -24px;
+}
+
+.squad-group .squad-group__item .squad-group__item-link:hover .player-card__shirt-number {
+    color: var(--color-secondary);
+}
+
+.squad-group .squad-group__item .squad-group__item-link:hover .player-card__header {
+    background-color: var(--color-primary);
+}
+
+.squad-group .squad-group__item .squad-group__item-link:hover .player-card__fullname {
+    text-decoration: underline;
+}
+
+.squad-group__item-link .player-card__body {
+    background-color: #fff;
+    /* height: 72px; */
+    color: var(--color-secondary);
+    display: flex;
+    position: relative;
+}
+
+.squad-group__item-link .player-card__body {
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    padding: 12px;
+}
+
+.squad-group__item-link .player-card__body .player-card__fullname {
+    color: #00285e;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 800;
+
+}
+
+.squad-group__item-link .player-card__body .player-card__name {
+    display: block;
+    letter-spacing: .3px;
+}
+
+.player-card__captain-badge {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: -27px;
+    right: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.player-card__captain-badge ::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent #2f3133 #2f3133 transparent;
+    border-style: solid;
+    border-width: px;
+}
+
+.player-card__captain-badge .badge-text {
+    position: absolute;
+    bottom: -1px;
+    right: 3px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    font-family: Gotham Narrow SSm A,Gotham Narrow SSm B,sans-serif;
+    line-height: 1;
+}
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+.section .fixtures {
+    margin: 0 -16px;
+}
+
+.fixtures .fixture {
+    float: left;
+    padding: 16px;
+    width: calc(100% /3);
+}
+
+.fixtures .fixture img {
+    width: 100%;
+    max-height: 400px;
+}
+
+.fixture .fixture-info {
+    padding: 16px;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #98C5E9;
+    box-sizing: border-box;
+
+}
+
+.fixture .fixture-info h3 {
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: 700;
+}
+
+.fixture .buy-ticket-btn {
+    width: 128px;
+    background-color: var(--color-secondary);
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    margin-right: 16px;
+    border-radius: 4px;
+}
+
+.fixture .buy-ticket-btn:hover {
+    background-color: #fff;
+    cursor: pointer;
+    color: #00285E !important;
+    transition: all 0.3s;
+}
+
+.fixture .buy-ticket-btn a {
+    text-decoration: none;
+}
+
+.btn-blue-primary {
+    color: #00285E;
+    background-color: #98C5E9;
+    padding: 8px;
+    font-size: 16px;
+    width: 128px;
+}
+
+.btn-blue-primary:hover {
+    background-color: #00285E;
+    color: #98C5E9 !important;
+    transition: all 0.3 linear;
+}
+
+.mt-44 {
+    margin-top: 44px !important;
+}
+
+.form-control {
+    border-color: #00285E !important;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.2;
+    display: none;
+}
