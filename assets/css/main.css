@@ -56,12 +56,7 @@ body {
     text-decoration: none;
 }
 
-#header .wrapper .menu {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-
-}
+#header .wrapper .menu {}
 
 #header .wrapper .menu i {
     font-size: 28px;
@@ -186,8 +181,14 @@ body {
 .squad-group .squad-group__item {
     list-style-type: none;
     margin: 16px;
-    flex: 1 0 22%;
+    /* flex: 1 0 22%; */
+    flex: 0 0 auto;
+    width: 22%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.squad-group .squad-group__item:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .squad-group .squad-group__item .squad-group__item-link {
@@ -287,9 +288,10 @@ body {
     color: #fff;
     font-weight: 700;
     text-align: center;
-    font-family: Gotham Narrow SSm A,Gotham Narrow SSm B,sans-serif;
+    font-family: Gotham Narrow SSm A, Gotham Narrow SSm B, sans-serif;
     line-height: 1;
 }
+
 .zoom {
     transition: transform .2s;
 }
@@ -382,4 +384,82 @@ body {
     background-color: #000;
     opacity: 0.2;
     display: none;
+}
+
+#footer {
+    /* height: 500px; */
+    background-color: var(--color-secondary);
+    width: 100%;
+    position: relative;
+    padding: 32px;
+}
+
+#footer .mci-logo {
+    /* margin: 24px; */
+}
+
+#footer .mci-logo .logo-img {
+    width: 100px;
+}
+
+#footer .mci-logo a {
+    font-size: 32px;
+}
+
+
+#footer .upper {
+    width: 100%;
+    height: auto;
+}
+#footer .upper .content-table {
+
+    margin-top: 24px;
+}
+
+#footer .upper .content-header {
+    font-size: 32px;
+}
+
+.content-table .content-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content-table .content-list .content-list-item {
+    padding: 8px 0;
+    margin-left: 16px;
+}
+
+.content-list .content-list-item .item-link {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content-list .content-list-item .item-link:hover {
+    color: var(--color-primary);
+}
+
+.content-list .content-list-item .item-link i {
+    margin-right: 8px;
+}
+
+#footer .copyright{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#footer .copyright .authorname  i {
+    margin-right: 8px;
+}
+#footer .copyright > .content-list{
+    /* display: inline-block; */
+}
+
+
+#footer .copyright > .content-list .content-list-item {
+    display: inline-block;
 }
