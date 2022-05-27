@@ -51,3 +51,15 @@ var closeModal = function(){
         modal.style.display='none'
     }
 }
+
+
+
+// View Profile Button Animation
+
+let profileBtnAnimationDisappear =function () {
+    let profileBtns = document.querySelectorAll('.profile-btn-js');
+    // console.log(profileBtns);  
+    profileBtns.forEach(function (btn) {
+        btn.classList.add('slide-out-right');
+    })  
+}

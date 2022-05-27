@@ -422,7 +422,7 @@ body {
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
 }
 
-.legend-img:hover .legend-dark-overlay{
+.legend-img:hover .legend-dark-overlay {
     display: block;
     animation-name: overlay-ani;
     animation-duration: .7s;
@@ -438,6 +438,7 @@ body {
         left: 0;
     }
 }
+
 .legend-img .profile-btn {
     background-color: rgba(0, 0, 0, 0);
     border: #a08c6e 2px solid;
@@ -451,13 +452,14 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
     display: none;
-    transition: all 0.2s ease;
+    /* opacity: 0; */
+    /* transition: all 0.2s ease;*/
     animation-name: profile-btn-out;
     animation-duration: 1s;
 }
 
 .legend-img:hover .profile-btn {
-    
+
     /* transition: profile-btn; */
     animation-name: profile-btn-in;
     animation-duration: 1s;
@@ -472,30 +474,46 @@ body {
 @keyframes profile-btn-in {
     from {
         right: -32px;
+        opacity: 0;
     }
 
     to {
+        opacity: 1;
         right: 16px;
         top: 50%;
         transform: translateY(-50%);
     }
 }
 
-@keyframes profile-btn-out {
+.slide-out-right {
+	-webkit-animation: slide-out-right 1s linear both;
+	        animation: slide-out-right 1s linear both;
+}
+
+@-webkit-keyframes slide-out-right {
     0% {
-        right: 16px;
-        top: 50%;
-        transform: translateY(-50%);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
     }
-    
-    50% {
-        right: -100%;
-    }
-
     100% {
-        display: none;
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
     }
-}
+  }
+  @keyframes slide-out-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+  }
 
 .legends-list .legends-list__item .legend-content {
     padding: 16px 32px !important;
